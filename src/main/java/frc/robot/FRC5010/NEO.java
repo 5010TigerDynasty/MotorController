@@ -5,6 +5,7 @@
 package frc.robot.FRC5010;
 
 import com.revrobotics.CANSparkMax;
+import com.revrobotics.REVLibError;
 
 import edu.wpi.first.wpilibj.motorcontrol.MotorController;
 
@@ -40,5 +41,9 @@ public class NEO extends CANSparkMax implements MotorController5010{
     public MotorController getMotor() {
         // TODO Auto-generated method stub
         return this;
+    }
+    @Override
+    public void factoryDefault(){
+        this.restoreFactoryDefaults();
     }
 }
